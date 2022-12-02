@@ -1,0 +1,440 @@
+/*Заголовок*/
+
+header {
+    background: #3a3d34 url(header2.jpg) no-repeat top center/cover;
+    height: 900px;
+}
+.header {
+    color: #fbf4ef;
+    font-weight: bold;
+    width: 70%;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 250px;
+}
+h1 {
+    font-size: 70px;
+}
+.title p {
+    font-size: 35px;
+    padding-top: 10px;
+}
+
+/*Кнопка со стрелкой*/
+
+.header__arrow-down {
+	display: flex;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #fbf4ef;
+	border-radius: 50%;
+	justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+	color: #fbf4ef;
+}
+
+.header__arrow-down:hover {
+	background-color: #fbf4ef;
+	color: #3a3d34;
+}
+
+/*Меню*/
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+    margin-bottom: 250px;
+    
+}
+.nav a {
+    color: #fbf4ef;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*Общие стили контента*/
+
+main {
+    background-color: #fceee3;
+    color: #3a3d34;
+}
+section {
+    width: 70%;
+    margin: 0 auto;
+}
+section h2 {
+    padding: 40px;
+    font-size: 35px;
+    text-align: center;
+}
+section h3 {
+    padding-bottom: 20px;
+    font-size: 25px;
+    text-align: center;
+}
+
+/*Обо мне*/
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+.block {
+    box-sizing: border-box;
+    width: 48.5%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+
+}
+.block:nth-child(2n) {
+	margin-right: 0;
+}
+
+.history p {
+    font-size: 20px;
+    padding: 10px 0;
+}
+.photo img {
+    width: 75%;
+    display: block;
+    margin: auto;
+}
+.history a, .resume a, .contacts p {
+    color: #3a3d34;
+    padding-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+.resume a {
+    display: block;
+    text-align: center;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/*Навыки*/
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 20px auto;
+    font-weight: bold;
+    font-size: 19px;
+}
+.icon_out {
+    width: 82px;
+    height: 82px;
+    border: 2px solid #3a3d34;
+    position: relative;
+    text-align: center;
+    transform: rotate(45deg);
+    box-shadow: 0px 0px 3px #3a3d34;
+}
+.icon {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #484844;
+    position: absolute;
+    top: 10px;
+	left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 3px #484844;
+}
+span {
+    transform: rotate(-45deg);
+} 
+
+/*Работы*/
+
+.works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0 auto;
+}
+.icon_works {
+    width: 30%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 2px solid #3a3d34;
+    box-shadow: 0px 0px 3px #3a3d34;
+}
+.works_overlay {
+    color: #272922;
+	background: rgba(252,238,227, 0.7);
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	display: flex;
+    font-size: 25px;
+    font-weight: bold;
+}
+.works_link {
+	color: #3a3d34;
+	font-size: 20px;
+    font-weight: bold;
+	margin-top: 10px;
+}
+.image_works {
+    width: 100%;
+	transition: 0.5s;
+}
+.icon_works:hover .image_works {
+	transform: scale(1.2);
+}
+
+/*Footer*/
+
+footer {
+    display: block;
+    background-color: #3a3d34;
+    color: #fceee3;
+    font-size: 17px;
+    padding: 20px;
+    text-align: center;
+}
+
+/*Настройки для экранов шириной до 500px*/
+
+@media (max-width: 299px) {
+	header {
+        height: 750px;
+    }
+    .header {
+        width: 100%;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+    .nav a {
+        margin-bottom: 15px;
+    }
+    .title {
+        margin-bottom: 150px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    .title p {
+        font-size: 15px;
+        padding-top: 10px;
+    }
+    .nav {
+        font-size: 20px;
+        margin-bottom: 200px;
+    }
+    .nav a {
+        font-size: 20px;
+    }
+    section {
+        width: 100%;
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .block.photo {
+        order: -1;
+        width: 70%;
+    }
+    .block {
+        width: 80%;
+    }
+    .resume a {
+        display: block;
+        text-align: center;
+    }
+    section h2, section h3, .contacts p, .history p {
+        text-align: center;
+    }
+    .history p {
+        text-indent: 15px;
+    }
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }    
+    .skills_icon  {  
+        margin-bottom: 30%;
+    }
+    .skills_icon:nth-child(5n) {
+        margin-bottom: 0;
+    }
+    .icon_works {
+        width: 50%;
+    }
+    .works_overlay {
+        font-size: 19px;
+    }
+    .works_name {
+        text-align: center;
+    }
+
+}
+@media (min-width: 300px) and (max-width: 576px) {
+	header {
+        height: 750px;
+    }
+    .header {
+        width: 100%;
+    }
+    .title {
+        margin-bottom: 170px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    .title p {
+        font-size: 25px;
+        padding-top: 10px;
+    }
+    .nav {
+        font-size: 20px;
+        margin-bottom: 170px;
+    }
+    .nav a {
+        font-size: 20px;
+    }
+    section {
+        width: 100%;
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .block.photo {
+        order: -1;
+        width: 70%;
+    }
+    .block {
+        width: 80%;
+    }
+    .resume a {
+        display: block;
+        text-align: center;
+    }
+    section h2, section h3, .contacts p, .history p {
+        text-align: center;
+    }
+    .history p {
+        text-indent: 15px;
+    }
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }    
+    .skills_icon  {  
+        margin-bottom: 20%;
+    }
+    .skills_icon:nth-child(5n) {
+        margin-bottom: 0;
+    }
+    .icon_works {
+        width: 50%;
+    }
+    .works_overlay {
+        font-size: 25px;
+    }
+    .works_name {
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 577px) and (max-width: 1080px) {
+	header {
+        height: 750px;
+    }
+    .header {
+        width: 100%;
+    }
+    .title {
+        margin-bottom: 220px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    .title p {
+        font-size: 25px;
+        padding-top: 10px;
+    }
+    .nav {
+        font-size: 20px;
+        margin-bottom: 220px;
+    }
+    .nav a {
+        font-size: 20px;
+    }
+    section {
+        width: 100%;
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .block.photo {
+        order: -1;
+        width: 70%;
+    }
+    .block {
+        width: 80%;
+    }
+    .resume a {
+        display: block;
+        text-align: center;
+    }
+    section h2, section h3, .contacts p, .history p {
+        text-align: center;
+    }
+    .history p {
+        text-indent: 15px;
+    }
+    .icon_works {
+        width: 35%;
+    }
+    .works_overlay {
+        font-size: 25px;
+    }
+    .works_name {
+        text-align: center;
+    }
+
+}
+@media (min-width: 1080px) and (max-width: 1300px) {
+	.header {
+        width: 100%;
+    }
+    section {
+        width: 90%;
+    }
+    .block .photo {
+        width: 70%;
+    }
+}
